@@ -1,0 +1,16 @@
+ALGORITHM SommeDesElementsDistincts
+VAR
+    tab,i: INTEGER;
+BEGIN
+ // Fusionnez les deux ensembles en un seul tableau
+    EnsembleFusionné <- tab1+tab2[[3, 1, 7, 9],[2, 4, 1, 9, 3]];
+    // Créez un tableau vide pour stocker les éléments distincts
+    TableauDistinct <- [7,4,2];
+     // Additionnez tous les éléments du tableau distinct
+    Somme <- 0
+POUR i DE 0 À LONGUEUR(TableauDistinct) - 1 FAIRE
+        Somme <- Somme + TableauDistinct[7,4,2];
+        FIN POUR
+     // Affichez la somme des éléments distincts
+    AFFICHER ["Somme des éléments distincts : ", Somme];
+END

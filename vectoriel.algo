@@ -1,0 +1,42 @@
+ALGORITHM produit_scalaire
+VAR
+    v1,v2:INTEGER
+    i:INTEGER
+BEGIN
+    PROCEDURE DetermineOrthogonality(n)
+    FOR i = 1 TO n
+        INPUT "Entrez les composantes du premier vecteur (v1) : ", v1
+        INPUT "Entrez les composantes du deuxième vecteur (v2) : ", v2
+        
+        dot_product(v1, v2, ps)
+        
+        IF ps = 0 THEN
+            PRINT "Les vecteurs sont orthogonaux."
+        ELSE
+            PRINT "Les vecteurs ne sont pas orthogonaux."
+        END IF
+    END FOR
+END PROCEDURE
+FUNCTION dot_product(v1, v2)
+    ps = 0
+    FOR i = 1 TO LENGTH(v1)
+        ps = ps + v1[i] * v2[i]
+    END FOR
+    RETURN ps
+END FUNCTION
+
+PROCEDURE DetermineOrthogonality(n)
+    FOR i = 1 TO n
+        INPUT "Entrez les composantes du premier vecteur (v1) : ", v1
+        INPUT "Entrez les composantes du deuxième vecteur (v2) : ", v2
+        
+        ps = dot_product(v1, v2)
+        
+        IF ps = 0 THEN
+            PRINT "Les vecteurs sont orthogonaux."
+        ELSE
+            PRINT "Les vecteurs ne sont pas orthogonaux."
+        END IF
+    END FOR
+END PROCEDURE
+END
